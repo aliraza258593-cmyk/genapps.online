@@ -18,7 +18,7 @@ const features = [
     },
     {
         icon: <Rocket className="w-6 h-6" />,
-        title: 'One-Click Deploy',
+        title: 'Instant Publish',
         description: 'Push to GitHub and publish instantly in one click. No configuration needed.',
         gradient: 'from-purple-500 to-pink-500',
     },
