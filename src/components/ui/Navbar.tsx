@@ -38,7 +38,7 @@ export default function Navbar() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden md:flex items-center gap-8">
                         <Link href="#templates" className="text-gray-400 hover:text-white transition-colors">
                             Templates
                         </Link>

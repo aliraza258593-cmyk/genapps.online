@@ -31,7 +31,7 @@ export default function HeroSection({ onGenerate }: HeroSectionProps) {
     if (!mounted) return null;
 
     return (
-        <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden pt-20 pb-32">
+        <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden pt-36 pb-32">
             {/* Background Effects */}
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[120px] animate-pulse-subtle" />

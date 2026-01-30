@@ -47,7 +47,7 @@ const plans: Plan[] = [
             'No watermark',
             'Faster generation speed',
             'GitHub integration',
-            'Vercel deployment',
+            'Instant deployment',
             'Priority support',
             'All templates',
         ],
@@ -103,8 +103,8 @@ export default function PricingSection() {
                         <div
                             key={plan.id}
                             className={`relative rounded-3xl p-8 border transition-all hover:scale-105 animate-fade-in ${plan.popular
-                                    ? 'glass border-primary shadow-2xl shadow-primary/20'
-                                    : 'glass border-border'
+                                ? 'glass border-primary shadow-2xl shadow-primary/20'
+                                : 'glass border-border'
                                 }`}
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
@@ -138,8 +138,8 @@ export default function PricingSection() {
                                 {/* CTA Button */}
                                 <button
                                     className={`w-full py-3 rounded-xl font-semibold transition-all ${plan.popular
-                                            ? 'bg-gradient-to-r from-primary to-secondary text-white hover:scale-105'
-                                            : 'bg-muted text-foreground hover:bg-muted/80'
+                                        ? 'bg-gradient-to-r from-primary to-secondary text-white hover:scale-105'
+                                        : 'bg-muted text-foreground hover:bg-muted/80'
                                         }`}
                                 >
                                     {plan.ctaText}
