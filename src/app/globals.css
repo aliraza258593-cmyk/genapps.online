@@ -32,19 +32,7 @@
   --glass-shine: rgba(255, 255, 255, 0.03);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #ffffff;
-    --foreground: #09090b;
-    --muted: #f4f4f5;
-    --muted-foreground: #71717a;
-    --border: #e4e4e7;
-    --primary: #000000;
-    --primary-foreground: #ffffff;
-    --glass-bg: rgba(255, 255, 255, 0.8);
-    --glass-border: rgba(0, 0, 0, 0.05);
-  }
-}
+
 
 /* ===================================
    THEME CONFIGURATION

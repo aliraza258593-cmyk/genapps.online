@@ -31,7 +31,7 @@ export default function HeroSection({ onGenerate }: HeroSectionProps) {
     if (!mounted) return null;
 
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden pt-40 pb-32">
+        <section className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden pt-32 gap-6">
             {/* Background Effects */}
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[120px] animate-pulse-subtle" />
@@ -40,13 +40,13 @@ export default function HeroSection({ onGenerate }: HeroSectionProps) {
 
             <div className="container relative z-10 px-4 text-center mt-12">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-8 animate-fade-in backdrop-blur-sm">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 animate-fade-in backdrop-blur-sm">
                     <Sparkles className="w-4 h-4 text-yellow-400" />
-                    <span className="text-xs font-medium text-white/80 tracking-wide uppercase">AI Website Builder V2.1</span>
+                    <span className="text-xs font-medium text-white/80 tracking-wide uppercase">AI Website Builder V2.2</span>
                 </div>
 
                 {/* Headline */}
-                <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 animate-slide-up leading-normal">
+                <h1 className="text-5xl md:text-7xl font-bold tracking-tight animate-slide-up leading-normal">
                     Build <span className="gradient-text">Stunning Websites</span> <br />
                     In Seconds with AI
                 </h1>
