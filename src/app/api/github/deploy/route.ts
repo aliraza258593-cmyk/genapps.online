@@ -1,9 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createGitHubRepo, pushToGitHub } from '@/lib/github';
-import { adminAuth, adminDb } from '@/lib/firebase-admin';
+import { getAdminAuth } from '@/lib/firebase-admin';
 
 export async function POST(req: NextRequest) {
     try {
+        const adminAuth = getAdminAuth();
         // 1. Authenticate Request
         const authHeader = req.headers.get('Authorization');
         if (!authHeader?.startsWith('Bearer ')) {

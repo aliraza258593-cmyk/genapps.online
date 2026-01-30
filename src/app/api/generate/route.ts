@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { generateWebsite, extractHTML } from '@/lib/longcat';
-import { adminAuth, adminDb } from '@/lib/firebase-admin';
+import { getAdminAuth, getAdminDb } from '@/lib/firebase-admin';
 
 // Switch to Node.js runtime to support Firebase Admin SDK
 // export const runtime = 'edge'; // REMOVED
@@ -8,6 +8,9 @@ export const maxDuration = 60;
 
 export async function POST(request: NextRequest) {
     try {
+        const adminAuth = getAdminAuth();
+        const adminDb = getAdminDb();
+
         const authHeader = request.headers.get('Authorization');
         if (!authHeader?.startsWith('Bearer ')) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { verifyWebhookSignature, LemonSqueezyWebhookPayload, getPlanFromVariant } from '@/lib/lemonsqueezy';
-import { adminDb } from '@/lib/firebase-admin'; // We need admin SDK for backend writes
+import { getAdminDb } from '@/lib/firebase-admin'; // We need admin SDK for backend writes
 import { headers } from 'next/headers';
 
 // Note: You need to set up firebase-admin.ts if not already present
@@ -39,6 +39,7 @@ export async function POST(req: NextRequest) {
             const plan = getPlanFromVariant(payload.data.attributes.variant_name);
 
             // TODO: Update Firebase User
+            // const adminDb = getAdminDb();
             // await adminDb.collection('users').doc(userId).update({ plan, credits: 9999 }); 
             console.log(`[Webhook] Updating user ${userId} to plan ${plan}`);
         } else if (event_name === 'subscription_cancelled') {
